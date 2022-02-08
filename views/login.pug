@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  include layout/layout
+  body(style=' background-image: url(https://lh4.googleusercontent.com/-XplyTa1Za-I/VMSgIyAYkHI/AAAAAAAADxM/oL-rD6VP4ts/w1184-h666/Android-Lollipop-wallpapers-Google-Now-Wallpaper-2.png);')
+    div(class="materialContainer")
+      div.masterial-button.alt-2(onclick="redirectLogin('REGISTER')")
+          span.shape 
+      div(class="box")
+        div(class="title") Login 
+        if error
+          div= error
+        form(action='/login' method="POST")
+          div(class="input")
+            label(for="email") Email
+            input#email(type="email" name="email")
+            span(class="spin")
+          div(class="input")
+            label(for="password") Password
+            input#password( type="password" name="password")
+            span(class="spin")
+          div.button
+            button(type="submit")
+              span Go  
+          a.pass-forgot(href="") Forgot your password?
+        
+       
