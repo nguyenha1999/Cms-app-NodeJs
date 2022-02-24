@@ -1,0 +1,16 @@
+.navbar-img {
+  background-color: black;
+  margin-bottom: 4rem;
+}
+h1 {
+  margin: 2rem;
+}
+.alert-img {
+  margin-bottom: 2rem;
+}
+.btn-img {
+  margin-bottom: 35vh;
+}
+.btn-img:hover {
+  border: 2px solid #a53692;
+}

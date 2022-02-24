@@ -1,0 +1,107 @@
+.jumbotron-h {
+  background: url("https://imgur.com/TGnVENi.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  height: 100vh;
+}
+a.nav-link-h {
+  color: black !important;
+}
+a.navbar-brand-h {
+  color: black !important;
+}
+#landing-header-h {
+  margin-top: 13vh;
+}
+#main-heading-h {
+  font-size: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#tag-h {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-right: 1rem;
+}
+#blue-h {
+  padding-top: 3rem;
+  margin-bottom: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#next-h {
+  margin-top: -3rem;
+}
+.txt6-h {
+  font-size: 1.2rem;
+}
+.abt1-h {
+  margin-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.ss-h {
+  font-size: 1.3rem;
+}
+.abt2-h {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/*========================== */
+#text1-h {
+  padding-top: 3vh;
+  color: #a53692;
+  font-size: 2.4rem;
+}
+#text2-h {
+  font-size: 1.2rem;
+  color: black;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.welcome-h {
+  background-color: rgb(235, 187, 228);
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#paddd-h {
+  padding-top: 20vh;
+}
+.bot-h {
+  padding-bottom: 20vh;
+}
+/*============================*/
+.qt-h {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.big-h {
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.inspire-h {
+  font-size: 1.2rem;
+}
+.logo-h {
+  height: 100px;
+  margin-left: 3vw;
+}
+@media (max-width: 992px) {
+  #main-heading-h {
+    font-size: 2.5rem;
+  }
+  #tag-h {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,30 @@
+nav.navbar.navbar-expand-lg.navbar-dark
+  .container
+    a.navbar-brand(href='/')
+      | Parvaaz Parindey 
+      i.fas.fa-dove
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a.nav-link(href='/') About
+        li.nav-item
+          a.nav-link(href='/explore') Blog
+        li.nav-item
+          a.nav-link(href='/opportunities') Opportunities
+        li.nav-item
+          a.nav-link(href='/volunteer') Fellowship
+      unless currentUser 
+          li.nav-item
+            a.nav-link(href='/register') Register
+          li.nav-item
+            a.nav-link(href='/login') Login
+      else 
+        if currentUser._id.equals(adminId)
+            li.nav-item
+            a.nav-link(href='/admin') Admin Dashboard
+        li.nav-item
+          a.nav-link(href='/logout') Logout
+       
+      

@@ -1,0 +1,72 @@
+.white-line-ft {
+  margin: 0;
+  padding: 0;
+  border: 0.001px solid rgb(99, 99, 99);
+}
+.footer-ft {
+  background-color: black;
+  color: white;
+  z-index: 1;
+  position: relative;
+  padding: 2rem;
+  padding-top: 7rem;
+}
+.footer2-ft {
+  background-color: black;
+  color: white;
+  z-index: 1;
+  position: relative;
+  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.bot2-ft {
+  padding-bottom: 15vh;
+}
+.fs-ft {
+  margin-bottom: 1.5rem;
+}
+.fs2-ft {
+  font-size: 90%;
+  text-align: justify;
+}
+.fs3-ft {
+  display: inline-block;
+}
+.fa-map-marker-alt-ft {
+  margin-right: 0.5rem;
+  font-size: 90%;
+}
+.fa-envelope-ft {
+  margin-right: 0.5rem;
+  font-size: 90%;
+}
+.fa-external-link-square-alt-ft {
+  margin-right: 0.5rem;
+  font-size: 90%;
+}
+#fb-ft {
+  color: blue;
+}
+#tweet-ft {
+  color: rgb(1, 236, 253);
+}
+#insta-ft {
+  color: red;
+}
+#tele-ft {
+  color: blue;
+}
+#yt-ft {
+  color: red;
+}
+#lin-ft {
+  color: rgb(1, 236, 253);
+}
+#logo2-ft {
+  height: 70px;
+}
+#center-ft {
+  font-size: 0.9rem;
+  text-align: center;
+}

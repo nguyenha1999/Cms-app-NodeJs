@@ -1,0 +1,106 @@
+include ../partials/header1.pug 
+  body
+    .container.text-center
+      h1#oh1 Become a Fellow
+    .container
+      h1#oh2.text-center Become a Fellow
+      p#p1.text-justify
+        | We welcome you for 
+        strong Fellowship Program
+        |  to exercise your mental machines and give a little something back to the society!
+        br
+        br
+        |         The applications are now open for people interested in social work from the age of 15 to 40. Fellows would be expected to participate in the events organised by our Foundation and take initiatives to plan more events. However, they would not be required to work 24*7 on all events. They will have the option to opt out of certain events if the events do not match their field of work. But, in order to get a certificate, a minimum number of hours/events would be mandatory for the year. 
+        br
+        br
+        |         To join our organisation please complete and submit the form below.
+        br
+        br
+        |         There is no fee payment required for this program.
+        br
+        |         The minimum tenure of your Fellowship would be 1 year with flexible timings and this will be a part time program.
+        br
+        br
+        |         After the completion of this tenure, you can apply to work as a full-time member of our team. The best part about working with us is that you do NOT have to devote long hours. Our work requires minimal time consumption and you&rsquo;ll have all the time to pursue your other endeavours. 
+        br
+        br
+        br
+        strong
+          | Our aim for this Fellowship is to inspire individuals
+          br
+        |         - across the country to work for the betterment of our society
+        br
+        |         - to work towards bridging the gap between classes closer
+        br
+        |         - to spread awareness about the societal problems 
+        br
+        |         - to help those in need and motivate others to do the same 
+        br
+        |         - to visit the underprivileged areas and educate people about their rights and laws
+        br
+        br
+        strong
+          | The Fellows would be expected to:
+          br
+        |         - conduct and take part in regular field visits to slum areas,
+        br
+        |         - design the content on certain social topics for presentations in different areas and for our official blog,
+        br
+        |         - Promote us and our initiatives on their social media handles,
+        br
+        |         - take part in donation drives in the underprivileged areas 
+        br
+        |         - take initiatives and suggest new ways in which we can contribute for the upliftment  of our society 
+        br
+        |         - exchange views and learn from their supervisors and ascertain the needs of the society better.
+        br
+        br
+        strong
+          | Perks (based on the level of participation throughout the year) 
+          br
+        |         - Recognition
+        br
+        |         - Certificate of Fellowship
+        br
+        |         - Performance based Rewards
+        br
+        |         - Letter of Recommendation
+        br
+        |         - Award for contribution in society
+        br
+        |         - Opportunity to be convenor and work on first-hand basis
+        br
+        |         - Regular Training programmes with experienced professionals
+        br
+        br
+        br
+        |         We hope that you will join us in this journey towards making this world a better place, bit by bit!
+        br
+        |         Till then, look after yourselves and those around you! 
+        br
+        strong Application is open for all, no restrictions.
+      br
+      br
+      h3 Application Form
+      small.form-text.text-muted Fill out this form and our team will reach back to you.
+      hr
+      form(action='/volunteer/new' method='POST')
+        .form-group
+          label(for='name') Name
+          input#name.form-control(type='text' name='volunteer[name]' required='')
+          small.form-text.text-muted Enter Your Full Name Here
+        .form-group
+          label(for='number') Phone Number
+          input#number.form-control(type='number' name='volunteer[phoneNumber]' maxlength='100' required='')
+          small.form-text.text-muted Enter Your Phone Number Here
+        .form-group
+          label(for='email') Email Address
+          input#email.form-control(type='email' name='volunteer[emailAddress]' maxlength='100' required='')
+        .form-group
+          label(for='reason') Why do you wish to join Asha Akanksha Foundation?
+          textarea#reason(name='volunteer[aimToJoin]' rows='6')
+        .form-group
+          label(for='use') In what way do you believe you can help us?
+          textarea#reason(name='volunteer[positionDetails]' rows='6' required='')
+        .text-center
+          button.btn.btn-lg.px-5(type='submit' required='') Submit

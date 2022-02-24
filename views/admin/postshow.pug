@@ -1,0 +1,26 @@
+include ../partials/header1.pug
+  body
+    .container
+      .row
+        .col-md-9
+          .card.shadow.p-3.mb-5.bg-white.rounded
+            h2.text-center #{post.heading}
+            img.img-fluid.text-center(src='#{post.image}')
+            p #{post.content}
+            p 
+              small(class="text-muted") Submitted by #{post.author.name}
+            div(class='row')
+              form#delete(action="/admin/explore/#{post._id}?_method=DELETE" method="POST")
+                button(class="btn btn-danger mx-2") Delete
+              form#approve(action="/admin/explore/#{post._id}?_method=PUT" method="POST")
+                input(type="submit" class="btn btn-success" value="Approve")
+        .col-md-3
+          .list-group
+            a.list-group-item.list-group-item-action.active Other Links
+            a.list-group-item.list-group-item-action(href='https://aafngo.org/' target='_blank') Our Website
+            a.list-group-item.list-group-item-action(href='https://www.instagram.com/craft_era5/?utm_source=ig_embed' target='_blank') Recycle Shop
+            a.list-group-item.list-group-item-action(href='https://docs.google.com/forms/d/12hrxNL63xQP2TNio-_720dw7A8AeyyQZ9zDeC4Nx3rc/viewform?edit_requested=true' target='_blank') Join Us Now
+            a.list-group-item.list-group-item-action(href='mailto:donationaaf@gmail.com' target='_blank') Donate
+            a.list-group-item.list-group-item-action(href='https://aafngo.org/our-activities' target='_blank') Our Activities
+            a.list-group-item.list-group-item-action(href='https://aafngo.org/gallery' target='_blank') Gallery
+            a.list-group-item.list-group-item-action(href='https://aafngo.org/awards' target='_blank') Awards

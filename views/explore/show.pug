@@ -1,0 +1,54 @@
+include ../partials/header1.pug
+  body
+    div(class='container')
+      span(style="background-color: purple;color: white;font-size: 1rem;padding: 5px 10px 5px 10px;border-radius: 3px;border: none;") #{post.category}
+      .row
+        .col-md-9 
+          div(class="card shadow p-3 mb-5 bg-white rounded")
+            h2.text-center #{post.heading}
+            post.category=post.category ? post.category : "Other"
+            img(src='#{post}' class="img-fluid text-center")
+            if currentUser && currentUser._id.equals(adminId)
+              div(class="row d-flex justify-content-end mx-2")
+                a(href="/explore/#{post._id}/imageedit")
+                button(class="btn btn-warning btn-sm") Replace Image 
+            p.text-justify #{post.content}
+            if currentUser && currentUser._id.equals(adminId)
+              div(class="text-right mr-5")
+                p.text-muted Submitted by #{post.author.name} (#{post.author.username})
+              div(clas="row d-flex justify-centent-end mx-2 mb-4")
+                a(href="/explore/#{post._id}/edit")
+                  button(class="btn btn-warning btn-sm") Edit 
+                form#delete(action="explore/#{post._id}?_method=DELETE" method="POST")
+                  button(class="btn btn-danger mx-2 btn-sm") Delete 
+              .container 
+                include('./likes')
+                div(style="margin: 2rem auto")
+                  form(action="/explore/#{post._id}/comments" method="POST")
+                    .form-group
+                      input(type="text" name="comment[text]" placeholder="Comment...")
+                      class="form-control"
+                      required 
+                    button(class='btn btn-primary d-flex justify-content-center') Add comment 
+
+                hr
+                each comment in post.comments 
+                  .row
+                    .col-md-12 
+                      strong #{comment.author.name}
+                      .mb-3 #{comment.text} 
+                      if currentUser && currentUser._id.equals(adminId)
+                        form(action="/explore/#{post._id}/comments/#{comment._id}?_method=DELETE" method="POST" id="inl")
+                          button(class="btn btn-sm btn-danger ml-2")
+                            i(class="fas fa-trash-alt")
+          .col-md-3
+            .list-group
+              a.list-group-item.list-group-item-action.active Other Links
+              a.list-group-item.list-group-item-action(href='https://aafngo.org/' target='_blank') Our Website
+              a.list-group-item.list-group-item-action(href='https://www.instagram.com/craft_era5/?utm_source=ig_embed' target='_blank') Recycle Shop
+              a.list-group-item.list-group-item-action(href='https://docs.google.com/forms/d/12hrxNL63xQP2TNio-_720dw7A8AeyyQZ9zDeC4Nx3rc/viewform?edit_requested=true' target='_blank') Join Us Now
+              a.list-group-item.list-group-item-action(href='mailto:donationaaf@gmail.com' target='_blank') Donate
+              a.list-group-item.list-group-item-action(href='https://aafngo.org/our-activities' target='_blank') Our Activities
+              a.list-group-item.list-group-item-action(href='https://aafngo.org/gallery' target='_blank') Gallery
+              a.list-group-item.list-group-item-action(href='https://aafngo.org/awards' target='_blank') Awards
+              a.list-group-item.list-group-item-action(href='/explore/new' target='_blank') Submit your creative writing

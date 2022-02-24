@@ -1,13 +1,81 @@
-doctype html
-html(lang="en")
-  include layout/layout
+include ./partials/header1.pug
   body
-    include layout/nav
-    include layout/header
-    //- div(class="container")
-    //-   div(class="container-blog")
-    //-     each blog in blogList
-    //-       include components/boxBlog
-    //-   div(class="container-friend")
-    //-     div(class="box-friend")
-    include layout/footer
+    .jumbotron
+      .container
+        include ./partials/navbar.pug
+      div 
+        img(class="logo" src="https://imgur.com/uXsCUrR.jpg")
+      div#landing-header(class='container text-center')
+        h1#main-heading Lê Ngọc Hà
+        p#tag 
+        a(class="btn btn-lg" href="/explore") Explore posts 
+          i(class="fas fa-dove")
+    #blue.container-fluid
+      .container.txt6
+        .text-center.ss
+          i.fas.fa-quote-right
+          i
+            div
+              | Kuch baatein, kuch sawaal
+            div
+              | Jo Koi bole na, koi puche na
+            div
+              | Aao baithe ham aur aap
+            div
+              | Kuch dabbe mudde khole na
+          i.fas.fa-quote-right
+        p.text-justify.abt1
+          | Parvaaz parindey, an attempt to take a leap into the sky of the unspoken. We are here to shed some light on the things that might be unsettling, but are of great essence to each one of us. There are so many things we are oblivious to, some unconsciously and some on purpose because they make us uncomfortable. But it is important that we join hands and raise our voice together, that we educate ourselves and others and become better members of the society.
+        p.text-justify.abt2
+          | Parvaaz Parindey is an initiative of Asha Akanksha Foundation to put such issues, that have been ignored for centuries in a spotlight. We hope that through this initiative we can educate people and make them aware about the problems that no one is questioning!
+    // ===============================Purple Section====================================
+    .welcome
+      .container-fluid
+        .bot
+          i#paddd.fab.fa-waze.fa-3x
+          h2#text1 Welcome to people with creative minds!
+          p#text2 Stay tuned for the latest news and posts by some of the most creative minds!
+          a.btn.btn-dark(href='/explore/new' type='button')
+            | Submit Your Creative Writing 
+            i.fas.fa-pencil-alt
+    // ===========================================White Card=========================================
+    .container
+      .card.my-5.shadow.p-3.mb-5.bg-white.rounded
+        .row.no-gutters
+          .col-md-6
+            #carouselExampleControls.carousel.slide(data-ride='carousel')
+              ol.carousel-indicators
+                li.active(data-target='#carouselExampleIndicators' data-slide-to='0')
+                li(data-target='#carouselExampleIndicators' data-slide-to='1')
+                li(data-target='#carouselExampleIndicators' data-slide-to='2')
+              .carousel-inner
+                .carousel-item.active
+                  img.d-block.w-100(loading='lazy' src='https://imgur.com/UL52xVA.jpg' alt='Picture of children')
+                .carousel-item
+                  img.d-block.w-100(loading='lazy' src='https://imgur.com/VLJytvG.jpg' alt='Picture of boy')
+                .carousel-item
+                  img.d-block.w-100(loading='lazy' src='https://imgur.com/6hsgkb2.jpg' alt='Picture of group of children')
+              a.carousel-control-prev(href='#carouselExampleControls' role='button' data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.sr-only Previous
+              a.carousel-control-next(href='#carouselExampleControls' role='button' data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.sr-only Next
+            // <img src="https://imgur.com/oDwtZl7.jpg" class="card-img" alt="...">
+          .col-md-6
+            .card-body
+              h2.card-title.big.text-center We inspire to fulfil your aspiration
+              // <i class="fas fa-water fa-2x" style="color:rgb(127, 219, 231);"></i>
+              p.card-text.inspire
+                | Your little efforts can make an inspiring story. So, let&apos;s come together make this world a better place.
+                .text-center.qt
+                  i.fas.fa-quote-left
+                .text-center.qt
+                  | Small acts 
+                  .text-center.qt when multiplied by millions of people
+                  .text-center.qt  can transform lives
+                .text-center.qt
+                  i.fas.fa-quote-right
+    include ./partials/socialbar2.pug
+    script(src="/javascript/Type.js")
+    include ./partials/footer.pug

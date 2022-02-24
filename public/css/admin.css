@@ -1,0 +1,44 @@
+.navbar-ad {
+  background-color: black;
+  margin-bottom: 4rem;
+}
+.cen-ad {
+  text-align: center;
+  margin-bottom: 15vh;
+}
+.c1-ad {
+  margin-top: 20vh;
+  margin-bottom: 40vh;
+}
+.btn-ad {
+  margin-bottom: 5vh;
+}
+.padbott-ad {
+  padding: 5vh 2rem 5vh 2rem;
+  margin-bottom: 60vh;
+}
+#c2-ad {
+  margin-bottom: 8vh;
+}
+.card-img-top-ad {
+  height: 13rem;
+  object-fit: cover;
+}
+#more-ad {
+  margin-bottom: 0;
+}
+
+#complaintBox-ad {
+  height: auto;
+  min-height: 20rem;
+}
+
+#checkboxModal-ad {
+  margin-top: 5%;
+}
+
+@media (min-width: 992px) {
+  .card-ad {
+    height: 35rem;
+  }
+}

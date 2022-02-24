@@ -1,0 +1,22 @@
+.btn-btn {
+  background-color: #a53692;
+  border: 0;
+  color: white !important;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.btn-btn:hover {
+  color: #a53692 !important;
+  background-color: white;
+}
+.btn-btn:hover {
+  border: 2px solid #a53692;
+  height: 40px;
+  display: inline;
+}
+
+.more-btn {
+  max-width: 112px;
+  height: 36px;
+}

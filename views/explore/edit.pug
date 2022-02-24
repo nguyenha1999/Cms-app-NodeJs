@@ -1,0 +1,37 @@
+include ../partials/header1.pug
+  body
+    .jumbotron 
+        include ../partials/navbar.pug
+     .container.text-center 
+        h1#oh2 Submit Your Creactive Writing
+    .container
+      h1#oh2.text-center Edit Creative Writing
+      p#p1 Note: All fields are mandatory. 
+      form(action='/explore/#{post._id}?_method=PUT' method='POST')
+        .form-group
+          label(for='formGroupExampleInput') Heading
+          input#formGroupExampleInput.form-control(type='text' name='post[heading]' value='#{post.heading}' required='')
+          small.form-text.text-muted This will appear as the heading of your post
+        .form-group
+          label(for='formGroupExampleInput') Short Description(100 Characters)
+          input#formGroupExampleInput.form-control(type='text' name='post[shortDescription]' maxlength='100' value='#{post.shortDescription}' required='')
+          small.form-text.text-muted This will appear under the heading on the main page
+        .form-group
+          label(for='inlineFormCustomSelect')
+            | Choose Category 
+            span.asterisk *
+          select#inlineFormCustomSelect.custom-select.mr-sm-2(name='post[category]' required='')
+        .form-group 
+          label(for="Date approved") Date Approved: 
+          if post.dateApproved 
+            input(type="date" id="birthday" name="post[dateApproved]" value='#{post.dateApproved.toISOString().slice(0,10)}')
+          else 
+            input(type="date" id="birthday" name="post[dateApproved]")
+        .form-group 
+          label(for="content") Content 
+          div#content #{post.content}
+          input(type="hidden" name="content")
+        .text-center 
+          button(type='submit' class="btn btn-lg") Submit
+
+    script(src="/javascript/quill1.js")

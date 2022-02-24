@@ -1,0 +1,68 @@
+include ../partials/header1.pug
+  body
+    .container
+      h1#oh2.text-center Edit Opportunity
+      p#p1.text-justify
+        | The fields marked with 
+        span.asterisk *
+        |  are mandatory.
+      form(action='/opportunities/<%= opportunity._id %>?_method=PUT' method='POST')
+        .form-group
+          label(for='formGroupExampleInput')
+            | Heading 
+            span.asterisk *
+          input#formGroupExampleInput.form-control(type='text' name='opportunity[heading]' value='<%= opportunity.heading %>' required='')
+          small.form-text.text-muted This will appear as the heading of your opportunity
+        .form-group
+          label(for='formGroupExampleInput') Short Description(100 Characters)
+          input#formGroupExampleInput.form-control(type='text' name='opportunity[shortDescription]' maxlength='100' value='<%= opportunity.shortDescription %>' required='')
+          small.form-text.text-muted This will appear under the heading on the main page
+        // ==============================================
+        .form-group
+          label(for='formGroupExampleInput2')
+            | About the Organisation 
+            span.asterisk *
+          #organisation.white
+          input#o1(type='hidden' name='opportunity[organisation]' required='')
+        .form-group
+          label(for='exampleFormControlTextarea1')
+            | About the Competition/Event/Opportunity
+            span.asterisk *
+          #detail.white
+          input#o2(type='hidden' name='opportunity[detail]' required='')
+        // =================================================
+        .form-group
+          label(for='formGroupExampleInput2')
+            | Eligibility/Prerequisites 
+            span.asterisk *
+          #eligibility.white
+          input#o3(type='hidden' name='opportunity[eligibility]' required='')
+        .form-group
+          label(for='formGroupExampleInput2')
+            | Important Dates 
+            span.asterisk *
+          #dates.white
+          input#o4(type='hidden' name='opportunity[dates]' required='')
+        .form-group
+          label(for='formGroupExampleInput2') Registration Process 
+          #process.white
+          input#o5(type='hidden' name='opportunity[process]' required='')
+        .form-group
+          label(for='formGroupExampleInput2')
+            | Benefits/Prizes/Perks 
+            span.asterisk *
+          #prize.white
+          input#o6(type='hidden' name='opportunity[prize]' required='')
+        .form-group
+          label(for='formGroupExampleInput2') Other Details
+          #other.white
+          input#o8(type='hidden' name='opportunity[other]' required='')
+        .form-group
+          label(for='formGroupExampleInput2')
+            | Contact details for more information
+            span.asterisk *
+          #contact.white
+          input#o7(type='hidden' name='opportunity[contact]' required='')
+        // =================================================
+        .text-center
+          button.btn.btn-lg.px-5(type='submit') Submit

@@ -1,0 +1,40 @@
+.jumbotron-ab {
+  background: url("https://imgur.com/TGnVENi.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  height: 70vh;
+  margin-bottom: 2rem;
+}
+a.nav-link-ab {
+  color: black !important;
+}
+a.navbar-brand-ab {
+  color: black !important;
+}
+h1#ab {
+  color: black;
+  margin-top: 10vh;
+  font-size: 4rem;
+}
+.txt6-ab {
+  font-size: 1.2rem;
+}
+.abt1-ab {
+  margin-top: 2rem;
+}
+.ss-ab {
+  font-size: 1.3rem;
+}
+.abt2-ab {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+@media (max-width: 992px) {
+  h1#ab {
+    font-size: 2rem;
+  }
+}

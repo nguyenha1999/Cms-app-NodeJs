@@ -1,0 +1,27 @@
+include ./partials/header1.pug
+  body
+    .container.last
+      .text-center
+        h2#signh.mt-5.pt-5 Forgot Password
+        form(action='/forgot' method='POST')
+          .form-group
+            input.form-control(type='email' name='username' placeholder='Email address' required='')
+          button#reset.btn.mb-3.mt-2
+            | Reset Password
+          a(href='/login' style='float:right') Back to Login
+          button#resend.resendButton(data-toggle='modal' data-target='#modalForm' style='float:left')
+            | Did not receive email?
+    #modalForm.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+      .modal-dialog.modal-lg(role='document')
+        .modal-content
+          .modal-header.text-center
+            h4.modal-title.w-100.font-weight-bold Register Complaint
+            button.close(type='button' data-dismiss='modal' aria-label='Close')
+              span(aria-hidden='true') &times;
+          .modal-body.text-center
+            form(action='/forgot/query' method='POST')
+              .form-group
+                input#defaultForm-email.form-control.validate(type='email' name='email' placeholder='Email' required='')
+              .form-group
+                input#defaultForm-pass.form-control.validate(type='text' name='description' placeholder='Description')
+              button.btn.btn-default(type='submit') Submit

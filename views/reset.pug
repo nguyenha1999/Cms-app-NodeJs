@@ -1,0 +1,12 @@
+include ./partials/header1.pug
+  body
+    div(class="container last")
+      div(class="text-center")
+        h2#signh Reset Password
+        form(action="/reset/#{token}" method="POST")
+          div(class="form-group")
+            input(type='password' class='form-control' name="password" placeholder="New Password" required)
+          div(class="form-group")
+            input(type="password" class="form-control" name="confirm" placeholder="Confirm Pass" required)
+          button(class="btn btn-lg mb-3") Update Pass
+          

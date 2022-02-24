@@ -1,42 +1,14 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
+passportLocalMongoose = require("passport-local-mongoose");
 
-const { Schema, model } = mongoose;
-
-const UserSchema = new Schema({
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    trim: true,
-  },
-  password: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  userName: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  avatar: {
-    type: String,
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now(),
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now(),
-  },
+const UserSchema = new mongoose.Schema({
+  username: String,
+  name: String,
+  password: String,
+  resetPasswordToken: String,
+  resetPasswordExpires: Date,
 });
 
-UserSchema.methods = {
-  comparePass(pass) {
-    return bcrypt.compare(pass, this.password);
-  },
-};
+UserSchema.plugin(passportLocalMongoose);
 
-module.exports = model("users", UserSchema);
+module.exports = mongoose.model("User", UserSchema);

@@ -1,0 +1,12 @@
+include ../partials/header1.pug"
+  body
+    .container
+      h1#oh2.text-center Add blog categories
+      form(action='/admin/blogcategories' method='POST')
+        .form-group
+          label(for='formGroupExampleInput') Blog Catgory
+          input#formGroupExampleInput.form-control(type='text' name='category' required='')
+          small.form-text.text-muted This will appear as the heading of your post
+        .text-center
+          button#btn-submit.btn.btn-lg(type='submit') Submit
+    include("../partials/footer.pug")

@@ -1,0 +1,39 @@
+.jumbotron-ctg {
+  background-position: center;
+  background-size: cover;
+  border-radius: 0;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  height: 60vh;
+  margin-bottom: 0rem;
+}
+.opph1-ctg {
+  color: white;
+  margin-top: 10vh;
+}
+.card-ctg {
+  margin-bottom: 1rem;
+}
+.btn-ctg:hover {
+  border: 2px solid #a53692;
+}
+.card-img-top-ctg {
+  height: 13rem;
+  object-fit: cover;
+}
+.btn-ctg {
+  margin-bottom: 2rem;
+}
+.alert-ctg {
+  padding: 5vh 2rem 5vh 2rem;
+  margin-bottom: 30vh;
+}
+#more-ctg {
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .card-ctg {
+    height: 35rem;
+  }
+}

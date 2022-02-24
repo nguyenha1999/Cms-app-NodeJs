@@ -1,0 +1,17 @@
+include ../partials/header1.pug
+  body
+    include ../partials/navbar.pug
+    .container
+      h1 Replace Image
+      .alert.alert-warning(role='alert')
+        | Note: This action cannot be reversed.
+      form(action='/explore/#{post._id}/image?_method=PUT' method='POST' enctype='multipart/form-data')
+        .form-group
+          label(for='exampleFormControlFile1')
+            | Upload Poster/Image 
+            span.asterisk *
+          input#exampleFormControlFile1.form-control-file(type='file' name='image' accept='image/*' required='')
+          small.form-text.text-muted Only .jpg/.jpeg/.png formats allowed. Max size 0.5MB
+        .text-center
+          button.btn.btn-lg.px-5(type='submit') Submit
+    include ../partials/footer.pug
