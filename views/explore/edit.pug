@@ -7,7 +7,7 @@ include ../partials/header1.pug
     .container
       h1#oh2.text-center Edit Creative Writing
       p#p1 Note: All fields are mandatory. 
-      form(action='/explore/#{post._id}?_method=PUT' method='PUT')
+      form(action=`/explore/${post._id}?_method=PUT` method='PUT')
         .form-group
           label(for='formGroupExampleInput') Heading
           input#formGroupExampleInput.form-control(type='text' name='post[heading]' value=`${post.heading}` required='')
@@ -34,7 +34,7 @@ include ../partials/header1.pug
             input(type="date" id="birthday" name="post[dateApproved]")
         .form-group 
           label(for="content") Content 
-          div#content #{post.content}
+          div#content= post.content
           input(type="hidden" name="content")
         .text-center 
           button(type='submit' class="btn btn-lg") Submit

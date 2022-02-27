@@ -136,6 +136,7 @@ router.delete("/explore/:id", middleware.isAdmin, (req, res) => {
           return res.redirect("/admin");
         } else {
           post.remove();
+          deletePost.save();
           req.flash("success", "Deleted Post!");
           return res.redirect("/admin/explore");
         }
@@ -202,6 +203,7 @@ router.delete("/opportunities/:id", middleware.isAdmin, (req, res) => {
             return res.redirect("/admin");
           } else {
             opportunity.remove();
+            deletePost.save();
             req.flash("success", "Deleted Opportunity!");
             res.redirect("/admin/opportunities");
           }

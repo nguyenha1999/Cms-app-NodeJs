@@ -54,7 +54,7 @@ router.get("/", (req, res) => {
     .find({})
     .sort("name")
     .exec((err, categories) => {
-      Post.find({ isApproved: false })
+      Post.find({ isApproved: true })
         .sort("dateApproved")
         .exec((err, posts) => {
           if (err) {
@@ -121,10 +121,13 @@ router.post("/", middleware.isLoggedIn, upload.single("image"), (req, res) => {
 // Show route
 router.get("/:uri", (req, res) => {
   id = getIdfromUri(req.params.uri);
+  console.log(id);
   Post.findById(id)
     .populate("comments likes")
     .exec((err, foundPost) => {
+      console.log("post", foundPost);
       if (err || !foundPost) {
+        console.log("err", err);
         console.log(err);
         req.flash("error", "Could not display the Post");
         return res.redirect("/explore");
