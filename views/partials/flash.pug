@@ -1,10 +1,10 @@
 body 
   if error && error.length > 0
-    div(class="alert alert-info alert-dismissible fade show" role="alert") #{error}
+    div(class="alert alert-info alert-dismissible fade show" role="alert")= error
       button(type='button' class="close" data-dismiss='alert' aria-label="Close")
-        span(aria-hidden="true") #{time}
+        span(aria-hidden="true")= time
   if success && success.length > 0
     div(class="alert alert-success" role='alert')
       button(type="button" class="close" data-dismiss='alert' aria-label="Close")
-        span(aria-hidden="true") #{times}
+        span(aria-hidden="true")= times
       

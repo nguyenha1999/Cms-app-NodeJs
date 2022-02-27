@@ -1,51 +1,57 @@
 include ../partials/header1.pug
   body
-      .jumbotron
-        div(class="container text-center")
-          h1#oh1 Submit
-      .container
-        h1#oh2.text-center Submit Your Creative Writing
-        p#p1 Note: All fields are mandatory. 
-        form(action='/explore' method='POST' enctype='multipart/form-data')
+    .jumbotron
+      .container 
+        include ../partials/navbar.pug
+      div(class="container text-center")
+        h1#oh1 Submit Your Create Writing
+    .container
+      h1#oh2.text-center Submit Your Creative Writing
+      p#p1 Note: All fields are mandatory. 
+      form(action='/explore' method='POST' enctype='multipart/form-data')
+        .form-group
+          label(for='formGroupExampleInput') Heading
+          input#formGroupExampleInput.form-control(type='text' name='post[heading]'  style="width: 80vw" required)
+          small.form-text.text-muted This will appear as the heading of your post
+        div(style="width: 80vw")
           .form-group
-            label(for='formGroupExampleInput') Heading
-            input#formGroupExampleInput.form-control(type='text' name='post[heading]' required='')
-            small.form-text.text-muted This will appear as the heading of your post
-          .col-lg-8
-            .form-group
-              label(for='inlineFormCustomSelect')
-                | Choose Category 
-                span.asterisk *
-              select#inlineFormCustomSelect.custom-select.mr-sm-2(name='post[category]' required='')
-                //- each category in categories 
-                option(value="a") A
+            label(for='inlineFormCustomSelect') Choose Category 
+            span.asterisk *
+            select#inlineFormCustomSelect.custom-select.mr-sm-2(name='post[category]' required)
+              each category in categories 
+                option(value=`${category._id}`)= category.name
           .form-group
             label(for='formGroupExampleInput') Short Description(100 Characters)
-            input#formGroupExampleInput.form-control(type='text' name='post[shortDescription]' maxlength='100' required='')
+            input#formGroupExampleInput.form-control(type='text' name='post[shortDescription]' maxlength='100' required)
             small.form-text.text-muted This will appear under the heading on the main page
           .form-group
             label(for='exampleFormControlFile1') Upload Image(Orientation: Square/Landscape)
-            input#exampleFormControlFile1.form-control-file(type='file' name='image' accept='image/*' )
+            input#exampleFormControlFile1.form-control-file(type='file' name='image' accept='image/*' required)
             small.form-text.text-muted Only .jpg/.jpeg/.png formats allowed. Max size 0.5MB
           .form-group
-            label(for='content') Content
+            label(for='content') Content 
             div#content
             input(type='hidden' name='content')
           .form-group
-            input#terms(type='checkbox' required='')
-            label(for='terms')
-              | I here by declare that the project report/Write up/ Critical Analysis or any kind similar nature of work submitted by me to Parvaaz Parindey by Asha Akansha Foundation , is a record of bonafide work carried out by me, with no kind of plagiarism. All due credits are given to resources cited. I further declare that the work reported in this has not been submitted and will not be submitted, either in part or in full, for the award of any other organization or any other institutions.
+            input#terms(type='checkbox' required)
+            label(for='terms') I here by declare that the project report/Write up/ Critical Analysis or any kind similar nature of work submitted by me to Parvaaz Parindey by Asha Akansha Foundation , is a record of bonafide work carried out by me, with no kind of plagiarism. All due credits are given to resources cited. I further declare that the work reported in this has not been submitted and will not be submitted, either in part or in full, for the award of any other organization or any other institutions.
           .text-center
             button#btn-submit.btn.btn-lg(type='submit') Submit
-      script.
-        var quill = new Quill("#content", {
-          modules: {
-            toolbar: [
-              [{ size: ["small", false, "large", "huge"] }],
-              ["bold", "italic", "underline", "strike"],
-              ["link", "blockquote"],
-              [{ script: "sub" }, { script: "super" }],
-            ],
-          },
-          theme: "snow",
-        });
+    script.
+      var quill = new Quill("#content", {
+        modules: {
+          toolbar: [
+            [{ size: ["small", false, "large", "huge"] }],
+            ["bold", "italic", "underline", "strike"],
+            ["link", "blockquote"],
+            [{ script: "sub" }, { script: "super" }],
+          ],
+        },
+        placeholder: 'Content goes here...',
+         theme: "snow",
+      });
+
+      let form = document.querySelector("form");
+      form.onsubmit = () => {
+        document.querySelector("input[name=content]").value = quill.root.innerHTML;
+      }

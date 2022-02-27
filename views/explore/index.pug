@@ -1,27 +1,31 @@
 include ../partials/header1.pug
   body
     div(class='jumbotron')
-      //- include ../partials/navbar.pug
+      .container
+        include ../partials/navbar.pug
       div(class="container text-center")
-        h1#exp Explore Posts 
+        h1 Explore Posts 
         a(href="/explore/new" class='btn') Submit Your Creative Write 
     div(class="container mb-5 mt-1")
       include ../partials/flash.pug
     div(class='container')
       div(class="dropdown d-flex justify-content-end")
-        button(class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") #{selectedCategory}
+        button(class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")= selectedCategory
         div(class='dropdown-menu' aria-labelledby="dropdownMenuButton")
-        each category in categories 
-          a(class="dropdown-item" href='/explore?category=#{category.name}') #{category.name} #{category.counts}
+          each category in categories
+            a(class="dropdown-item" href=`/explore?category${category}`) #{category.name} #{category.count}
       div(class="row")
-        div(class="col-lg-4")
+        each post in posts
+          - var slug = post.heading.toLowerCase().replace(/[^\w ]+/g,'');
+          - var date=new Date(post.dateApproved).toDateString().replace("Invalid Date","");
+          div(class="col-lg-4")
             div(class="card shadow p-3 mb-5 bg-white rounded")
-              img(src="/image/cms_icon.png" class="card-img-top")
+              img(src= `${post.image}` class="card-img-top")
               div(class="card-body")
-                h5(class="card-title") Le Ngoc Ha
-                p(class="card-text") Haizzz
+                h5(class="card-title")=post.heading
+                p(class="card-text")=post.sortDescription
                 div 
-                  a(href="explore/a" id="more" class='btn') Read More 
-                p(class="text-muted" style="margin-top: 10px;") 15/09/1999
+                  a(href=`explore/${slug}&id=${post._id}` id="more" class='btn btn-1') Read More 
+                p(class="text-muted" style="margin-top: 10px;") #{date}
     include ../partials/socialbar2.pug
     include ../partials/footer.pug

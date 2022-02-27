@@ -1,44 +1,44 @@
-.navbar-ad {
+.navbar {
   background-color: black;
   margin-bottom: 4rem;
 }
-.cen-ad {
+.cen {
   text-align: center;
   margin-bottom: 15vh;
 }
-.c1-ad {
+.c1 {
   margin-top: 20vh;
   margin-bottom: 40vh;
 }
-.btn-ad {
+.btn {
   margin-bottom: 5vh;
 }
-.padbott-ad {
+.padbott {
   padding: 5vh 2rem 5vh 2rem;
   margin-bottom: 60vh;
 }
-#c2-ad {
+#c2 {
   margin-bottom: 8vh;
 }
-.card-img-top-ad {
+.card-img-top {
   height: 13rem;
   object-fit: cover;
 }
-#more-ad {
+#more {
   margin-bottom: 0;
 }
 
-#complaintBox-ad {
+#complaintBox {
   height: auto;
   min-height: 20rem;
 }
 
-#checkboxModal-ad {
+#checkboxModal {
   margin-top: 5%;
 }
 
 @media (min-width: 992px) {
-  .card-ad {
+  .card {
     height: 35rem;
   }
 }

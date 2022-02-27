@@ -2,25 +2,30 @@ include ../partials/header1.pug
   body
     .jumbotron 
         include ../partials/navbar.pug
-     .container.text-center 
+    .container.text-center 
         h1#oh2 Submit Your Creactive Writing
     .container
       h1#oh2.text-center Edit Creative Writing
       p#p1 Note: All fields are mandatory. 
-      form(action='/explore/#{post._id}?_method=PUT' method='POST')
+      form(action='/explore/#{post._id}?_method=PUT' method='PUT')
         .form-group
           label(for='formGroupExampleInput') Heading
-          input#formGroupExampleInput.form-control(type='text' name='post[heading]' value='#{post.heading}' required='')
+          input#formGroupExampleInput.form-control(type='text' name='post[heading]' value=`${post.heading}` required='')
           small.form-text.text-muted This will appear as the heading of your post
         .form-group
           label(for='formGroupExampleInput') Short Description(100 Characters)
-          input#formGroupExampleInput.form-control(type='text' name='post[shortDescription]' maxlength='100' value='#{post.shortDescription}' required='')
+          input#formGroupExampleInput.form-control(type='text' name='post[shortDescription]' maxlength='100' value=`${post.shortDescription}` required='')
           small.form-text.text-muted This will appear under the heading on the main page
         .form-group
           label(for='inlineFormCustomSelect')
             | Choose Category 
             span.asterisk *
           select#inlineFormCustomSelect.custom-select.mr-sm-2(name='post[category]' required='')
+            each category in categories 
+              if category.name === post.category 
+                option(value=`${category._id}`) selected #{category.name}
+              else 
+                option(value=`${category._id}`)=category.name
         .form-group 
           label(for="Date approved") Date Approved: 
           if post.dateApproved 
@@ -35,3 +40,4 @@ include ../partials/header1.pug
           button(type='submit' class="btn btn-lg") Submit
 
     script(src="/javascript/quill1.js")
+    include ../partials/footer.pug

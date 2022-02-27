@@ -1,4 +1,4 @@
-.jumbotron-ab {
+.jumbotron {
   background: url("https://imgur.com/TGnVENi.jpg") no-repeat;
   background-position: center;
   background-size: cover;
@@ -9,10 +9,10 @@
   height: 70vh;
   margin-bottom: 2rem;
 }
-a.nav-link-ab {
+a.nav-link {
   color: black !important;
 }
-a.navbar-brand-ab {
+a.navbar-brand {
   color: black !important;
 }
 h1#ab {
@@ -20,16 +20,16 @@ h1#ab {
   margin-top: 10vh;
   font-size: 4rem;
 }
-.txt6-ab {
+.txt6 {
   font-size: 1.2rem;
 }
-.abt1-ab {
+.abt1 {
   margin-top: 2rem;
 }
-.ss-ab {
+.ss {
   font-size: 1.3rem;
 }
-.abt2-ab {
+.abt2 {
   margin-top: 2rem;
   margin-bottom: 4rem;
 }

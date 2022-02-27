@@ -1,4 +1,4 @@
-.jumbotron-ex {
+.jumbotron {
   background: url("https://imgur.com/13Iewor.jpg") no-repeat;
   background-position: center;
   background-size: cover;
@@ -16,29 +16,33 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.card-img-top-ex {
+.card-img-top {
   height: 13rem;
   object-fit: cover;
 }
-.btn-ex:hover {
+/* input {
+  width: 60vw;
+} */
+
+.btn:hover {
   border: 2px solid #a53692;
 }
-#more-ex {
+#more {
   margin-bottom: 0;
 }
 @media (min-width: 992px) {
-  .card-ex {
+  .card {
     height: 35rem;
   }
 }
 
 @media (max-width: 992px) {
-  #exp-ex {
+  #exp {
     font-size: 3.5rem;
   }
 }
 @media (max-width: 540px) {
-  #exp-ex {
+  #exp {
     font-size: 3rem;
   }
 }

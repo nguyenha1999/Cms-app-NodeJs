@@ -1,12 +1,11 @@
-nav.navbar.navbar-expand-lg.navbar-dark
-  .container
-    a.navbar-brand(href='/')
-      | Parvaaz Parindey 
-      i.fas.fa-dove
+nav.navbar-expand-lg(style=" width: 100vw; padding: 0 !important; margin-left: -120px !important")
+  .container.d-flex.align-center.vertical-midle
+    a.navbar-brand(href='/' style="font-weight: bold; color: rgb(28, 199, 73) !important") LNH Dev
+      i.fas.fa-dove(style="color:#000 !important")
     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
-      ul.navbar-nav.ml-auto
+      ul.ml-auto.d-flex.justify-content-end.align-center(style="list-style: none;" )
         li.nav-item
           a.nav-link(href='/') About
         li.nav-item
@@ -15,16 +14,18 @@ nav.navbar.navbar-expand-lg.navbar-dark
           a.nav-link(href='/opportunities') Opportunities
         li.nav-item
           a.nav-link(href='/volunteer') Fellowship
-      unless currentUser 
+        unless currentUser 
           li.nav-item
-            a.nav-link(href='/register') Register
+            a.nav-link(href='/register'  style="color: #000 !important;") Register
           li.nav-item
-            a.nav-link(href='/login') Login
-      else 
-        if currentUser._id.equals(adminId)
+            a.nav-link(href='/login'  style="color: #000 !important;") Login
+        else 
+          if currentUser._id.equals("")
             li.nav-item
-            a.nav-link(href='/admin') Admin Dashboard
-        li.nav-item
-          a.nav-link(href='/logout') Logout
-       
+              a.nav-link(href='/admin'   style="color: #000 !important;") Admin Dashboard
+            li.nav-item
+              a.nav-link(href='/logout'   style="color: #000 !important;") Logout
+          else 
+              li.nav-item
+              a.nav-link(href='/logout'   style="color: #000 !important") Logout
       

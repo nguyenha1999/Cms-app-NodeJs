@@ -1,14 +1,13 @@
 include ./partials/header1.pug
   body
+    //- include ./partials/homeModal.pug
     .jumbotron
       .container
         include ./partials/navbar.pug
-      div 
-        img(class="logo" src="https://imgur.com/uXsCUrR.jpg")
-      div#landing-header(class='container text-center')
-        h1#main-heading Lê Ngọc Hà
+      div#landing-header(class='container text-center' style="padding-top: 90px")
+        h4 Lê Ngọc Hà
         p#tag 
-        a(class="btn btn-lg" href="/explore") Explore posts 
+          a(class="btn btn-lg" href="/explore") Explore posts 
           i(class="fas fa-dove")
     #blue.container-fluid
       .container.txt6

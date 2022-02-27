@@ -4,13 +4,15 @@ if opportunities.length == 0
     div(class="alert alert-info" role="alert") No Opportunities 
 .container 
   .row 
-    div(class="col-lg-4")
-      div(class="card shadow p-3 mb-5 bg-white rounded")
-        img(src="#{opportunity.image}" class="card-img-top")
-        .card-body 
-          h5(class="card-title") #{opportunity.heading.substring(0, 100)}
-          p(class="card-text") #{opportunoty.shortDescription}
-          div
-            a(href="/opportunities/#{slug}" id="more" class="btn") Read More 
-            p(class="text-muted" style="margin-top: 10px;") Date approved: #{date}
+    each opportunity in opportunities
+      - var date=new Date(opportunity.dateApproved).toLocaleDateString().replace("Invalid Date","NA");
+      div(class="col-lg-4")
+        div(class="card shadow p-3 mb-5 bg-white rounded")
+          img(src=`${opportunity.image}` class="card-img-top")
+          .card-body 
+            h5(class="card-title") #{opportunity.heading.substring(0, 100)}
+            p(class="card-text") #{opportunoty.shortDescription}
+            div
+              a(href="/opportunities/#{slug}" id="more" class="btn") Read More 
+              p(class="text-muted" style="margin-top: 10px;") Date approved: #{date}
 include ../../partials/socialbar2.pug

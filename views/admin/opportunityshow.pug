@@ -1,10 +1,12 @@
 include ../partials/header1.pug
   body
+    .container 
+      include ../partials/navbar.pug
     div(class="container")
       div(clas="row")
         div(class="col-md-9 card shadow p-3 mb-5 bg-white rounded")
-          h2(class='text-center') #{opportunity.heading}
-          img(src="#{opportunity.image}" class='img fluid text-center')
+          h2(class='text-center')= opportunity.heading
+          img(src=`${opportunity.image}` class='img fluid text-center')
           p 
             b About the Organisation #{opportunity.organisation}
           p 
@@ -16,19 +18,17 @@ include ../partials/header1.pug
           if opportunity.process && opportunity.process.length > 11
             p 
               b Registration Process #{opportunity.process}
-          <p>
-            <b>Benefits/Prizes/Perks</b> #{opportunity.prize}
-          </p>
-          <p>
-            <b>Contact details for more information</b>  #{opportunity.contact}
-          </p>
-          if opportunity.other && opportunity.other.length > 11)
+            p
+              b Benefits/Prizes/Perks #{opportunity.prize}
+            p
+              b Contact details for more information  #{opportunity.contact}
+          if opportunity.other && opportunity.other.length > 11
             p
               b Other Details #{opportunity.other}
           .row
-            form#delete(action='/admin/opportunities/<%= opportunity._id %>?_method=DELETE' method='POST')
+            form#delete(action=`/admin/opportunities/${opportunity._id}?_method=DELETE` method='POST')
               button.btn.btn-danger.mx-2 Delete
-            form#approve(action='/admin/opportunities/<%= opportunity._id %>?_method=PUT' method='POST')
+            form#approve(action= `/admin/opportunities/${opportunity._id}?_method=PUT` method='POST')
               input.btn.btn-success(type='submit' value='Approve')
         div(class="col-md-3")
           div(class="list-group")

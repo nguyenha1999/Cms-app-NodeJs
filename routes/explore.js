@@ -54,13 +54,13 @@ router.get("/", (req, res) => {
     .find({})
     .sort("name")
     .exec((err, categories) => {
-      Post.find({ isApproved: true })
+      Post.find({ isApproved: false })
         .sort("dateApproved")
-        .exec((err, Posts) => {
+        .exec((err, posts) => {
           if (err) {
             console.log(err);
           } else {
-            var counts = Posts.reduce((p, c) => {
+            var counts = posts.reduce((p, c) => {
               var cat = c.category;
               if (!p.hasOwnProperty(cat)) p[cat] = 0;
               p[cat]++;
@@ -77,11 +77,11 @@ router.get("/", (req, res) => {
             if (!req.query.category || req.query.category == "All") {
               req.query.category = "All";
             } else {
-              Posts = Posts.filter((a) => a.category == req.query.category);
+              posts = posts.filter((a) => a.category == req.query.category);
             }
             // categories[0].count = sum;
             res.render("explore/index", {
-              posts: Posts,
+              posts: posts,
               categories: categories,
               selectedCategory: req.query.category,
             });

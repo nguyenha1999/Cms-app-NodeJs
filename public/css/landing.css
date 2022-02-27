@@ -1,13 +1,13 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-.logo-ld {
+.logo {
   z-index: 1;
   position: relative;
   height: 100px;
   margin-left: 7vw;
 }
-.image-title-ld {
+.image-title {
   background-color: rgb(39, 38, 38);
   color: white;
   margin-bottom: 0;
@@ -15,54 +15,54 @@ body {
   font-family: "Satisfy", cursive;
   padding: 16px 0px 16px 0px;
 }
-#landing-header-ld {
+#landing-header {
   z-index: 1;
   position: relative;
   text-align: center;
 }
-#landing-header-ld h1 {
+#landing-header h1 {
   color: #fff;
   text-shadow: 2px 2px 32px black;
   margin-top: -20vh;
 }
-#landing-header-ld p {
+#landing-header p {
   color: #fff;
   text-shadow: 2px 2px 32px black;
 }
-#tag-ld {
+#tag {
   font-size: 4vh;
   font-weight: bold;
   color: plum !important;
 }
-.navbar-ld {
+.navbar {
   z-index: 1;
   position: relative;
   font-weight: 600;
   font-size: 0.85rem;
   margin-top: 0 !important;
 }
-.nav-item-ld {
+.nav-item {
   text-transform: uppercase;
   padding-left: 1.5rem;
   z-index: 1;
   position: relative;
 }
-a.nav-link-ld {
+a.nav-link {
   color: white !important;
   z-index: 1;
   position: relative;
 }
-a.nav-link-ld:hover {
+a.nav-link:hover {
   color: rgb(250, 85, 222) !important;
   z-index: 1;
   position: relative;
 }
-a.navbar-brand-ld:hover {
+a.navbar-brand:hover {
   color: rgb(250, 85, 222) !important;
   z-index: 1;
   position: relative;
 }
-.btn-ld {
+.btn {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   margin-bottom: 3rem;
@@ -71,66 +71,66 @@ a.navbar-brand-ld:hover {
   color: white !important;
   /* border-radius:80; */
 }
-.inspire-ld {
+.inspire {
   font-size: 1.2rem;
 }
-.btn-ld:hover {
+.btn:hover {
   color: #a53692;
   background-color: white;
 }
-.welcome-ld {
+.welcome {
   margin-top: 30vh;
   background-color: rgb(235, 187, 228);
   text-align: center;
   z-index: 1;
   position: relative;
 }
-#paddd-ld {
+#paddd {
   padding-top: 20vh;
 }
-.bot-ld {
+.bot {
   padding-bottom: 20vh;
 }
-#text1-ld {
+#text1 {
   padding-top: 3vh;
   color: #a53692;
   font-size: 2.4rem;
 }
-#text2-ld {
+#text2 {
   font-size: 1.2rem;
   color: black;
 }
-.card-ld {
+.card {
   z-index: 1;
   position: relative;
 }
-p.card-text-ld {
+p.card-text {
   z-index: 1;
   position: relative;
   color: black;
 }
-.black-ld {
+.black {
   color: white;
   background-color: black;
   margin-top: 0;
   z-index: 1;
   position: relative;
 }
-.bot2-ld {
+.bot2 {
   padding-bottom: 15vh;
 }
-.fs3-ld {
+.fs3 {
   display: inline-block;
 }
-.text3-ld {
+.text3 {
   padding-top: 17vh;
   text-align: center;
   margin-top: 0;
 }
-.no-ld {
+.no {
   border: 0;
 }
-.three-ld {
+.three {
   height: 40vh;
   margin: 0;
   padding: 0;
@@ -138,15 +138,15 @@ p.card-text-ld {
   z-index: 1;
   position: relative;
 }
-.img-fluid-ld {
+.img-fluid {
   height: 100%;
   width: 100%;
 }
-h5.image-title-ld:hover {
+h5.image-title:hover {
   color: rgb(255, 160, 255);
   background-color: rgb(139, 37, 122);
 }
-.big-ld {
+.big {
   font-size: 2.1rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
@@ -155,7 +155,7 @@ h1 {
   font-size: 5rem;
   font-weight: 800;
 }
-.footer-ld {
+.footer {
   background-color: black;
   color: white;
   z-index: 1;
@@ -164,7 +164,7 @@ h1 {
   padding-top: 7rem;
   /* padding-bottom: 7rem; */
 }
-.footer2-ld {
+.footer2 {
   background-color: black;
   color: white;
   z-index: 1;
@@ -174,63 +174,63 @@ h1 {
   padding-bottom: 2rem;
   /* text-align: center; */
 }
-#center-ld {
+#center {
   font-size: 0.9rem;
   text-align: center;
 }
-.fs-ld {
+.fs {
   margin-bottom: 1.5rem;
 }
-.fs2-ld {
+.fs2 {
   font-size: 90%;
   text-align: justify;
 }
-.fa-map-marker-alt-ld {
+.fa-map-marker-alt {
   margin-right: 0.5rem;
   font-size: 90%;
 }
-.fa-envelope-ld {
+.fa-envelope {
   margin-right: 0.5rem;
   font-size: 90%;
 }
-.fa-external-link-square-alt-ld {
+.fa-external-link-square-alt {
   margin-right: 0.5rem;
   font-size: 90%;
 }
-#logo3-ld {
+#logo3 {
   height: 20px;
 }
-.above-ld {
+.above {
   z-index: 1;
   position: relative;
 }
-#fb-ld {
+#fb {
   color: blue;
 }
-#tweet-ld {
+#tweet {
   color: rgb(1, 236, 253);
 }
-#insta-ld {
+#insta {
   color: red;
 }
-#tele-ld {
+#tele {
   color: blue;
 }
-#yt-ld {
+#yt {
   color: red;
 }
-#lin-ld {
+#lin {
   color: rgb(1, 236, 253);
 }
-#logo2-ld {
+#logo2 {
   height: 70px;
 }
-.white-line-ld {
+.white-line {
   margin: 0;
   padding: 0;
   border: 0.001px solid rgb(99, 99, 99);
 }
-.qt-ld {
+.qt {
   font-size: 1.2rem;
   font-style: italic;
 }

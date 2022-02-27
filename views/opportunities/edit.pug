@@ -6,12 +6,12 @@ include ../partials/header1.pug
         | The fields marked with 
         span.asterisk *
         |  are mandatory.
-      form(action='/opportunities/<%= opportunity._id %>?_method=PUT' method='POST')
+      form(action=`/opportunities/${opportunity._id}?_method=PUT` method='POST')
         .form-group
           label(for='formGroupExampleInput')
             | Heading 
             span.asterisk *
-          input#formGroupExampleInput.form-control(type='text' name='opportunity[heading]' value='<%= opportunity.heading %>' required='')
+          input#formGroupExampleInput.form-control(type='text' name='opportunity[heading]' value=`${opportunity.heading}` required='')
           small.form-text.text-muted This will appear as the heading of your opportunity
         .form-group
           label(for='formGroupExampleInput') Short Description(100 Characters)

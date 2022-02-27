@@ -53,3 +53,7 @@
   margin-left: 75px;
   font-size: 30px;
 }
+
+.form-group {
+  width: 100% !important;
+}

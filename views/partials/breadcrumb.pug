@@ -2,8 +2,8 @@ body
   ol.breadcrumb
     each a in breadcrumb.slice(0, breadcrumb.length-1)
       li.breadcrumb-item
-        a(href="#{a.url}") #{a.label.slice(0,1).toUpperCase()}#{a.label.slice(1)}
-    li(class="breadcrumb-item active" aria-current="page") #{breacrumb[breadcrumb.length-1].label.slice(0,1).toUpperCase()}
+        a(href=`${a.url}`) #{a.label.slice(0,1).toUpperCase()}#{a.label.slice(1)}
+    li(class="breadcrumb-item active" aria-current="page") lol
   style. 
     .breadcrumb{
       margin-bottom: 3rem;

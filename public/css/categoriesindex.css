@@ -1,4 +1,4 @@
-.jumbotron-ctg {
+.jumbotron {
   background-position: center;
   background-size: cover;
   border-radius: 0;
@@ -8,32 +8,32 @@
   height: 60vh;
   margin-bottom: 0rem;
 }
-.opph1-ctg {
+.opph1 {
   color: white;
   margin-top: 10vh;
 }
-.card-ctg {
+.card {
   margin-bottom: 1rem;
 }
-.btn-ctg:hover {
+.btn:hover {
   border: 2px solid #a53692;
 }
-.card-img-top-ctg {
+.card-img-top {
   height: 13rem;
   object-fit: cover;
 }
-.btn-ctg {
+.btn {
   margin-bottom: 2rem;
 }
-.alert-ctg {
+.alert {
   padding: 5vh 2rem 5vh 2rem;
   margin-bottom: 30vh;
 }
-#more-ctg {
+#more {
   margin-bottom: 0;
 }
 @media (min-width: 992px) {
-  .card-ctg {
+  .card {
     height: 35rem;
   }
 }

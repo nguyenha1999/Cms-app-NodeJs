@@ -1,0 +1,38 @@
+include ../partials/header1.pug
+  body 
+    .container.mb-4(style="margin-top: -2rem;")
+      include ../partials/flash.pug
+    .container 
+      .row 
+        .col-md-9.card.shadow.p-3.mb-5.bg-white.rounded 
+          h1.text-center= opportunity.heading 
+            img.img-fluid.text-center.mb-5(src=`${opportunity.image}`)
+          if currentUser && currrent._id.equals("")
+            .row.d-flex.justify-content-end.mx-2 
+              a(href=`/opportunities/${opportunities._id}/imageedit`)
+                button.btn.btn-warning.btn-sm.my-2 Replace Image 
+          p   
+            b About the Organisation  #{opportunity.organisation}
+          p   
+            b About the Competition/Event/Opportunity  #{opportunity.detail}
+          p   
+            b Eligibility/Prerequisites  #{opportunity.eligibility}
+          p   
+            b Important Dates  #{opportunity.dates}
+          if opportunity.process && opportunity.process.length>11
+            p   
+              b Registration Process  #{opportunity.organisation}
+            p   
+              b Benefits/Prizes/Perks  #{opportunity.organisation}
+          if opportunity.other && opportunity.other.length>11
+            p   
+              b Other Details #{opportunity.organisation}
+          p   
+            b Contact details for more information  #{opportunity.organisation}
+          if currentUser && currentUser._id.equals("")
+            .row.d-flex.justify-content-end.mx-2.mb-4
+              a(href='/opportunities/<%= opportunity._id %>/edit')
+                button.btn.btn-warning.btn-sm Edit
+              form#delete(action='/opportunities/<%= opportunity._id %>?_method=DELETE' method='POST')
+                button.btn.btn-danger.btn-sm.mx-2 Delete
+

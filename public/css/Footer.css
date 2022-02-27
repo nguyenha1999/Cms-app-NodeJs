@@ -1,17 +1,21 @@
-.white-line-ft {
+body {
+  width: 100vw;
+}
+.white-line {
   margin: 0;
   padding: 0;
   border: 0.001px solid rgb(99, 99, 99);
 }
-.footer-ft {
+.footer {
   background-color: black;
   color: white;
   z-index: 1;
   position: relative;
   padding: 2rem;
   padding-top: 7rem;
+  width: 100%;
 }
-.footer2-ft {
+.footer2 {
   background-color: black;
   color: white;
   z-index: 1;
@@ -20,53 +24,53 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.bot2-ft {
+.bot2 {
   padding-bottom: 15vh;
 }
-.fs-ft {
+.fs {
   margin-bottom: 1.5rem;
 }
-.fs2-ft {
+.fs2 {
   font-size: 90%;
   text-align: justify;
 }
-.fs3-ft {
+.fs3 {
   display: inline-block;
 }
-.fa-map-marker-alt-ft {
+.fa-map-marker-alt {
   margin-right: 0.5rem;
   font-size: 90%;
 }
-.fa-envelope-ft {
+.fa-envelope {
   margin-right: 0.5rem;
   font-size: 90%;
 }
-.fa-external-link-square-alt-ft {
+.fa-external-link-square-alt {
   margin-right: 0.5rem;
   font-size: 90%;
 }
-#fb-ft {
+#fb {
   color: blue;
 }
-#tweet-ft {
+#tweet {
   color: rgb(1, 236, 253);
 }
-#insta-ft {
+#insta {
   color: red;
 }
-#tele-ft {
+#tele {
   color: blue;
 }
-#yt-ft {
+#yt {
   color: red;
 }
-#lin-ft {
+#lin {
   color: rgb(1, 236, 253);
 }
-#logo2-ft {
+#logo2 {
   height: 70px;
 }
-#center-ft {
+#center {
   font-size: 0.9rem;
   text-align: center;
 }

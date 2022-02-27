@@ -1,16 +1,12 @@
-form(action="/explore/#{post._id}/like" method="POST")
+form(action=`/explore/${post._id}/like` method="POST")
   div(class="btn-group mt-4")
-    if currentUser && post.some(function(like){
-      if like unless null 
-      return like.equals(currentUser._id)
-    })
-      button(class="btn btn-danger")
-        i(class='fas fa-heart')
+    if currentUser && post.likes != 0
+      button(class="btn-danger" style="height: 38px; width: 42px; border-width: 0; border-top-left-radius: 4px;border-bottom-left-radius: 4px")
+        i(class='fas fa-heart' )
     else 
-      button(class='btn btn-light')
+      button(class='btn-light' style="height: 38px; background: #fff; width: 42px; border-width: 0; border-top-left-radius: 4px;border-bottom-left-radius: 4px")
         i(class="fas fa-heart")
     if post.likes === null 
-      button(class='btn btn-danger') 0 Likes 
+      button(class='btn-danger'  style="height: 38px; width: 64px; border-width: 0; border-top-right-radius: 4px;border-bottom-right-radius: 4px") 0 Likes 
     else 
-        button(class='btn btn-danger') #{post.likes.length} Likes 
-       
+        button(class='btn-danger' style="height: 38px; width: 64px; border-width: 0; border-top-right-radius: 4px;border-bottom-right-radius: 4px") #{post.likes.length} Likes 

@@ -10,33 +10,39 @@ body {
   /*optional*/
   cursor: pointer;
 }
+.btn-show {
+  background: #007bff !important;
+  border-radius: 4px;
+  height: 38px;
+  border-width: 0;
+  cursor: pointer;
+}
 
-.navbar-nav {
+.navbar {
   z-index: 1;
-  position: relative;
   font-weight: 600;
   font-size: 0.85rem;
   margin-top: 0 !important;
-  background-color: red !important;
+  background-color: #fff !important;
 }
-.nav-item-nav {
+.nav-item {
   text-transform: uppercase;
   padding-left: 0.5rem;
   z-index: 1;
   position: relative;
 }
-a.nav-link-nav {
+a.nav-link {
   color: white !important;
   z-index: 1;
   position: relative;
   text-align: center;
 }
-a.nav-link-nav:hover {
+a.nav-link:hover {
   color: rgb(250, 85, 222) !important;
   z-index: 1;
   position: relative;
 }
-a.navbar-brand-nav:hover {
+a.navbar-brand:hover {
   color: rgb(250, 85, 222) !important;
   z-index: 1;
   position: relative;

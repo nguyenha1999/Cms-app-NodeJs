@@ -16,11 +16,11 @@ middlewareObj.isAdmin = (req, res, next) => {
     // if(req.user._id.equals("5edc9cb83ad90209f088b386")){
     // 	next();
     // }
-    if (req.user._id.equals(res.locals.adminId)) {
+    if (req.user._id.equals("621138029e2949204812fbd6")) {
       next();
     } else {
       req.flash("error", "You don't have permission to do that");
-      return res.redirect("/explore");
+      return res.redirect("/login");
     }
   } else {
     req.flash("error", "Please login first");

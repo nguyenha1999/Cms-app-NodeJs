@@ -1,4 +1,4 @@
-.jumbotron-h {
+.jumbotron {
   background: url("https://imgur.com/TGnVENi.jpg") no-repeat;
   background-position: center;
   background-size: cover;
@@ -10,97 +10,97 @@
   margin-bottom: 0;
   height: 100vh;
 }
-a.nav-link-h {
+a.nav-link {
   color: black !important;
 }
-a.navbar-brand-h {
+a.navbar-brand {
   color: black !important;
 }
-#landing-header-h {
+#landing-header {
   margin-top: 13vh;
 }
-#main-heading-h {
+#main-heading {
   font-size: 5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-#tag-h {
+#tag {
   font-size: 1.5rem;
   font-weight: bold;
   padding-right: 1rem;
 }
-#blue-h {
+#blue {
   padding-top: 3rem;
   margin-bottom: 0;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-#next-h {
+#next {
   margin-top: -3rem;
 }
-.txt6-h {
+.txt6 {
   font-size: 1.2rem;
 }
-.abt1-h {
+.abt1 {
   margin-top: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.ss-h {
+.ss {
   font-size: 1.3rem;
 }
-.abt2-h {
+.abt2 {
   margin-top: 2rem;
   margin-bottom: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 /*========================== */
-#text1-h {
+#text1 {
   padding-top: 3vh;
   color: #a53692;
   font-size: 2.4rem;
 }
-#text2-h {
+#text2 {
   font-size: 1.2rem;
   color: black;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.welcome-h {
+.welcome {
   background-color: rgb(235, 187, 228);
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-#paddd-h {
+#paddd {
   padding-top: 20vh;
 }
-.bot-h {
+.bot {
   padding-bottom: 20vh;
 }
 /*============================*/
-.qt-h {
+.qt {
   font-size: 1.2rem;
   font-style: italic;
 }
-.big-h {
+.big {
   font-size: 2.1rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
-.inspire-h {
+.inspire {
   font-size: 1.2rem;
 }
-.logo-h {
+.logo {
   height: 100px;
   margin-left: 3vw;
 }
 @media (max-width: 992px) {
-  #main-heading-h {
+  #main-heading {
     font-size: 2.5rem;
   }
-  #tag-h {
+  #tag {
     font-size: 1rem;
     font-weight: bold;
   }
